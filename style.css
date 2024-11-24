@@ -6,6 +6,7 @@
   font-family: "Hanken Grotesk", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /*Colors*/
@@ -35,8 +36,8 @@ body{
 .card{
   display: flex;
   border-radius: 10px;
-  width: 40rem;
-  height: 100%;
+  width: 40em;
+  height: auto;
   box-shadow: 0px 0px 10px 1px var(--Light-lavender);
 }
 
@@ -95,6 +96,11 @@ body{
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
+}
+
+.card-summary h3{
+  font-size: 1.3em;
+  margin-bottom: 10px;
 }
 
 .rows{
@@ -176,3 +182,33 @@ body{
 }
 
 /*Media queries*/
+/*Mobile*/
+@media (max-width: 375px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .card{
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+
+  .card-result, .card-summary{
+    width: 100%;
+  }
+
+  .card-result{
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .result-circle{
+    width: 140px;
+    height: 140px;
+  }
+
+  .caption{
+    font-size: 1em;
+  }
+}
