@@ -183,7 +183,7 @@ body{
 
 /*Media queries*/
 /*Mobile*/
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   body {
     justify-content: flex-start;
     align-items: flex-start;
